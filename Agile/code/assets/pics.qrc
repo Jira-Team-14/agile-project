@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="login">
+    <file>png-transparent-computer-icons-padlock-lock-technic-computer-icons-symbol-thumbnail.png</file>
+    <file>fa5b1aaf768ac5d000823c335d161813.png</file>
+    <file>Sample_User_Icon.png</file>
+    <file>d1668ee13fec4635d7f8d2a65c89d1b2.jpg</file>
+    <file>70447380_2355764128087080_2304351109373755392_n.jpg.jpg</file>
+    <file>logintransparentimage.png</file>
+  </qresource>
+</RCC>
