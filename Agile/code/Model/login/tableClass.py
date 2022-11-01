@@ -16,7 +16,6 @@ class logintable:
             ) as connection:
                 print(connection)
                 cursor = connection.cursor()
-                print("OKE")
                 get_login_query = """
                 SELECT id,password 
                 FROM agile_project.login
@@ -26,6 +25,7 @@ class logintable:
                     result = cursor.fetchall()
                     for row in result:
                         print(row)
+                    return result
         except Error as e:
             print(e)
 
