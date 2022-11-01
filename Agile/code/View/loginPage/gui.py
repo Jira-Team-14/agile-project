@@ -10,7 +10,7 @@ import FAgui as fg
 import receptionistgui as rg
 
 class Ui_LoginWindow(object):
-    type=1
+    type=0
     def showAD(self):
         self.ADgui = QtWidgets.QMainWindow()
         self.ui = ag.Ui_MainWindow()
@@ -34,8 +34,6 @@ class Ui_LoginWindow(object):
         self.ui = rg.Ui_MainWindow()
         self.ui.setupUi(self.REgui)
         self.REgui.show()
-
-
 
     def setupUi(self, LoginWindow):
         LoginWindow.setObjectName("LoginWindow")
@@ -377,7 +375,8 @@ class Ui_LoginWindow(object):
             elif(self.type == 4):
                 self.showRE()
                 LoginWindow.close()
-
+        else:
+            print ("invalid login")
 
 
 if __name__ == "__main__":
