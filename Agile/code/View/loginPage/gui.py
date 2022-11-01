@@ -172,7 +172,7 @@ class Ui_LoginWindow(object):
         self.label_11.setFont(font)
         self.label_11.setStyleSheet("color:rgb(104,112,137);")
         self.label_11.setObjectName("label_11")
-        self.loginButton = QtWidgets.QPushButton(self.centralwidget)
+        self.loginButton = QtWidgets.QPushButton(self.centralwidget , clicked=lambda: self.closewindow())
         self.loginButton.setEnabled(True)
         self.loginButton.setGeometry(QtCore.QRect(440, 359, 361, 41))
         font = QtGui.QFont()
@@ -236,6 +236,8 @@ class Ui_LoginWindow(object):
         self.loginButton.setText(_translate("LoginWindow", "Login"))
         self.menuLogin.setTitle(_translate("LoginWindow", "Login"))
 
+    def closewindow(self):
+        LoginWindow.hide()
 
 
 if __name__ == "__main__":
