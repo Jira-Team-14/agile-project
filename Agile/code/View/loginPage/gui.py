@@ -9,8 +9,12 @@ import BAgui as bg
 import FAgui as fg
 import receptionistgui as rg
 
+
+# This is the Gui class of the login page
 class Ui_LoginWindow(object):
     type=0
+
+# functions to switch windows after login authentication
     def showAD(self):
         self.ADgui = QtWidgets.QMainWindow()
         self.ui = ag.Ui_MainWindow()
@@ -259,6 +263,7 @@ class Ui_LoginWindow(object):
         self.loginButton.setText(_translate("LoginWindow", "Login"))
         self.menuLogin.setTitle(_translate("LoginWindow", "Login"))
 
+# function to change UI as user chooses role (AD , BA , FA , RE)
     def usertypechoice(self,type):
         self.adminButton.setStyleSheet("QPushButton {\n"
                                            "background-color: rgba(255, 255, 255, 0);\n"
@@ -358,6 +363,7 @@ class Ui_LoginWindow(object):
         self.type=type
         print(self.type)
 
+#collect login info and send to CONTROL to authenticate login info
     def checklogin(self):
         usertuple=(int(self.usernameBox.text()),int(self.passwordBox.text()))
         isacceptable = checkloginControl(self.type,usertuple)

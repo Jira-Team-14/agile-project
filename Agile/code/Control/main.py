@@ -6,6 +6,8 @@ import sys
 sys.path.append(os.path.join('D:/', 'Projects', 'Agile','Agile','code','Model','login'))
 from tableClass import logintable
 
+
+# call MODEL to query login info and authenticate info
 def checkloginControl(type , usertuple):
     queryobj=logintable(type)
     result = queryobj.getloginquery()

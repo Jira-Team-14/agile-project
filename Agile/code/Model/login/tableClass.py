@@ -2,12 +2,14 @@ from getpass import getpass
 from mysql.connector import connect, Error
 
 
+# This is a class for DATABASE TABLE "LOGIN" query methods
 class logintable:
     def __init__(self,type):
         self.type = type
 
     def getloginquery(self):
         try:
+# establish a connection and query table
             with connect(
                     host="localhost",
                     user="root",
