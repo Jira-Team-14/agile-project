@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-#yarab
+#yarab2.0
 
 class Ui_addNewEmployee(object):
     def setupUi(self, addNewEmployee):
