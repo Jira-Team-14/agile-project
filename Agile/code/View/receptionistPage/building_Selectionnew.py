@@ -21,9 +21,7 @@ import Reservationnew as CR
 from view import gui as G
 
 
-def close():
-    BuildingSelection.close()
-    pass
+
 
 
 class Ui_BuildingSelection(object):
