@@ -12,8 +12,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from tkinter import messagebox
 import os
 import sys
-from UIs import *
-from Ui import *
+
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from main import main_control
