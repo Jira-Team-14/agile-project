@@ -15,19 +15,21 @@ from main import main_control
 from login import gui as G
 import Buildings_Managmentnew as BM
 
-
+# close function
 def close():
     addNewBuilding.close()
     pass
 
 class Ui_addNewBuilding(object):
+    
+    # back function
     def back(self):
         self.Buildings_Managment = QtWidgets.QMainWindow()
         self.ui = BM.Ui_Buildings_Managment()
         self.ui.setupUi(self.Buildings_Managment)
         self.Buildings_Managment.show()
         close()
-
+    # logout function
     def logOut(self):
         self.LoginWindow = QtWidgets.QMainWindow()
         self.ui = G.Ui_LoginWindow()
@@ -35,6 +37,7 @@ class Ui_addNewBuilding(object):
         self.LoginWindow.show()
         close()
 
+    # add new building function
     def addBuilding(self):
         mc = main_control()
         result = mc.getGuiMsgsControl()
@@ -52,6 +55,7 @@ class Ui_addNewBuilding(object):
             ermsg = ermsg2 + " " + ermsg1
             messagebox.showerror('Error', ermsg)
 
+    # UI setUp function
     def setupUi(self, addNewBuilding):
         addNewBuilding.setObjectName("addNewBuilding")
         addNewBuilding.resize(1200, 600)
@@ -400,7 +404,7 @@ class Ui_addNewBuilding(object):
         self.addButton.setText(_translate("addNewBuilding", "Add"))
 
 
-
+# main
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
