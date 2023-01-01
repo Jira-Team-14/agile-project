@@ -19,6 +19,7 @@ def close():
 
 class Ui_buildingAdmin_Dashboard(object):
 
+    # logout function
     def logOut(self):
         self.LoginWindow = QtWidgets.QMainWindow()
         self.ui = G.Ui_LoginWindow()
@@ -26,6 +27,7 @@ class Ui_buildingAdmin_Dashboard(object):
         self.LoginWindow.show()
         close()
 
+    # back function
     def back(self):
         self.LoginWindow = QtWidgets.QMainWindow()
         self.ui = G.Ui_LoginWindow()
@@ -33,6 +35,7 @@ class Ui_buildingAdmin_Dashboard(object):
         self.LoginWindow.show()
         close()
 
+    # transitions Functions
     def showReservations2(self):
         self.viewReservations = QtWidgets.QMainWindow()
         self.ui = VR.Ui_viewReservations()
@@ -47,6 +50,7 @@ class Ui_buildingAdmin_Dashboard(object):
         self.Employees_Managment.show()
         close()
 
+    # UI setUp function
     def setupUi(self, buildingAdmin_Dashboard):
         buildingAdmin_Dashboard.setObjectName("buildingAdmin_Dashboard")
         buildingAdmin_Dashboard.resize(1200, 600)
