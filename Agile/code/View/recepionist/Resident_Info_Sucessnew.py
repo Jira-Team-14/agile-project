@@ -18,13 +18,14 @@ from login import gui as G
 import Buildings_Managmentnew as BM
 from PyQt5.QtGui import QIcon, QPixmap
 
-
+# close function
 def close():
     Resident_Info_Sucess.close()
     pass
 
 class Ui_Resident_Info_Sucess(object):
-
+    
+    # logout function
     def logOut(self):
         self.LoginWindow = QtWidgets.QMainWindow()
         self.ui = G.Ui_LoginWindow()
@@ -33,7 +34,7 @@ class Ui_Resident_Info_Sucess(object):
         close()
 
 
-
+    # back function
     def back(self):
         self.LoginWindow = QtWidgets.QMainWindow()
         self.ui = G.Ui_LoginWindow()
@@ -42,7 +43,8 @@ class Ui_Resident_Info_Sucess(object):
         close()
 
     mc = main_control()
-
+    
+    # show building function
     def showBuildingSelection(self):
         result = self.mc.getGuiMsgsControl()
         if (self.nationalIdLineEdit.text() == ''):
@@ -63,6 +65,7 @@ class Ui_Resident_Info_Sucess(object):
         self.BuildingSelection.show()
         # Resident_Info_Sucess.close()
 
+    # show user info function
     def showUserInfo(self):
 
         result = self.mc.getGuiMsgsControl()
@@ -84,7 +87,7 @@ class Ui_Resident_Info_Sucess(object):
         self.showEligibleLabel.setText(_translate("Resident_Info_Sucess", str(result[0][8])))
         return
 
-
+    # UI setUp function
     def setupUi(self, Resident_Info_Sucess):
         Resident_Info_Sucess.setObjectName("Resident_Info_Sucess")
         Resident_Info_Sucess.resize(1200, 600)
