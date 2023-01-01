@@ -18,18 +18,21 @@ import Admin_Dashboardnew as AD
 import Employees_Managmentnew as EM
 from login import gui as G
 
+# close function
 def close():
     deleteEmployee.close()
     pass
 
 class Ui_deleteEmployee(object):
 
+    # logout function
     def logOut(self):
                 self.LoginWindow = QtWidgets.QMainWindow()
                 self.ui = G.Ui_LoginWindow()
                 self.ui.setupUi(self.LoginWindow)
                 self.LoginWindow.show()
                 close()
+    # back function
     def back(self):
                 self.Employees_Managment = QtWidgets.QMainWindow()
                 self.ui = EM.Ui_Employees_Managment()
@@ -39,6 +42,7 @@ class Ui_deleteEmployee(object):
 
                 # collect employee info and send to CONTROL to get info from db
 
+    # show employee function
     def showEmployee(self):
         _translate = QtCore.QCoreApplication.translate
         mc = main_control()
@@ -476,7 +480,7 @@ class Ui_deleteEmployee(object):
         self.adminDashboardLabel_2.setText(_translate("deleteEmployee", "Delete Employee"))
 
 
-
+# main function
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
