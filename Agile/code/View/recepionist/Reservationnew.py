@@ -28,6 +28,7 @@ class Ui_Reservation(object):
                 self.ui.setupUi(self.LoginWindow)
                 self.LoginWindow.show()
 
+    # back function
     def back(self):
         self.BuildingSelection = QtWidgets.QMainWindow()
         self.ui = BS.Ui_BuildingSelection()
@@ -38,6 +39,7 @@ class Ui_Reservation(object):
 
     mc = main_control()
 
+   # show confirmed resident info function
     def showConfirm(self):
         restuple = []
         dateTime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -53,14 +55,14 @@ class Ui_Reservation(object):
         self.ui = CR.Ui_viewReservations()
         self.ui.setupUi(self.confrimRes)
         self.confrimRes.show()
-
+    # select from combobox function
     def on_combobox_changed(self, value):
         self.buildingIdLabel.setText(self.mc.getBID())
         self.showNameLabel_2.setText(self.mc.getG())
         result = self.mc.getAvBedsResControl(value)
         self.buildingIdLabel_2.setText(str(result)[11:12])
 
-
+    # UI setUp function
     def setupUi(self, Reservation):
         Reservation.setObjectName("Reservation")
         Reservation.resize(1200, 600)
