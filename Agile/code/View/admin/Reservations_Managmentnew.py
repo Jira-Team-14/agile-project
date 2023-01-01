@@ -14,12 +14,13 @@ from login import gui as G
 from admin import viewReservationsAN as VR
 import deleteReservationsAN as DR
 
+# close function
 def close():
     Reservations_Managment.close()
     pass
 
 class Ui_Reservations_Managment(object):
-
+    # transitions Functions
     def showReservations2(self):
         self.viewReservations = QtWidgets.QMainWindow()
         self.ui = VR.Ui_viewReservations()
@@ -34,7 +35,7 @@ class Ui_Reservations_Managment(object):
         self.viewReservations.show()
         close()
 
-
+    # back function
     def back(self):
         self.Admin_Dashboard = QtWidgets.QMainWindow()
         self.ui = AD.Ui_Admin_Dashboard()
@@ -42,7 +43,7 @@ class Ui_Reservations_Managment(object):
         self.Admin_Dashboard.show()
         close()
 
-
+    # logout function
     def logOut(self):
         self.LoginWindow = QtWidgets.QMainWindow()
         self.ui = G.Ui_LoginWindow()
@@ -50,6 +51,7 @@ class Ui_Reservations_Managment(object):
         self.LoginWindow.show()
         close()
 
+     # UI setUp function
     def setupUi(self, Reservations_Managment):
         Reservations_Managment.setObjectName("Reservations_Managment")
         Reservations_Managment.resize(1200, 600)
@@ -187,7 +189,7 @@ class Ui_Reservations_Managment(object):
         self.adminDashboardLabel_2.setText(_translate("Reservations_Managment", "Reservations Mangament"))
 
 
-
+# main
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
