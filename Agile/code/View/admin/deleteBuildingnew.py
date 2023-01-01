@@ -15,12 +15,14 @@ from main import main_control
 from login import gui as G
 import Buildings_Managmentnew as BM
 
+# close function
 def close():
     deleteBuilding.close()
     pass
 
 class Ui_deleteBuilding(object):
 
+    # logout function
     def logOut(self):
                 self.LoginWindow = QtWidgets.QMainWindow()
                 self.ui = G.Ui_LoginWindow()
@@ -28,6 +30,7 @@ class Ui_deleteBuilding(object):
                 self.LoginWindow.show()
                 close()
 
+    # back function
     def back(self):
                 self.Buildings_Managment = QtWidgets.QMainWindow()
                 self.ui = BM.Ui_Buildings_Managment()
@@ -37,6 +40,7 @@ class Ui_deleteBuilding(object):
 
                 # collect building info and send to CONTROL to get info from db
 
+    # show building function
     def showBuilding(self):
         _translate = QtCore.QCoreApplication.translate
         mc = main_control()
@@ -427,7 +431,7 @@ class Ui_deleteBuilding(object):
         self.ageLabel_5.setText(_translate("deleteBuilding", "Floors Gender"))
 
 
-
+# main
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
