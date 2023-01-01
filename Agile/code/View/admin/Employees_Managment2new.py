@@ -16,20 +16,20 @@ import deleteEmployeenew as DE2
 from login import gui as G
 import buildingAdmin_Dashboardnew as BM
 
-
+# close function
 def close():
     Employees_Managment.close()
     pass
 
-class Ui_Employees_Managment(object):
-
+class Ui_Employees_Managment(object):'
+    # logout function
     def logOut(self):
                 self.LoginWindow = QtWidgets.QMainWindow()
                 self.ui = G.Ui_LoginWindow()
                 self.ui.setupUi(self.LoginWindow)
                 self.LoginWindow.show()
                 close()
-
+    # back function
     def back(self):
                 self.buildingAdmin_Dashboard = QtWidgets.QMainWindow()
                 self.ui = BM.Ui_buildingAdmin_Dashboard()
@@ -37,6 +37,7 @@ class Ui_Employees_Managment(object):
                 self.buildingAdmin_Dashboard.show()
                 close()
 
+     # transitions Functions
     def showAddNewEmployees2(self):
         self.addNewEmployee = QtWidgets.QMainWindow()
         self.ui = addE2.Ui_addNewEmployee()
@@ -59,7 +60,7 @@ class Ui_Employees_Managment(object):
         self.deleteEmployee.show()
         close()
 
-
+    # UI setUp function
     def setupUi(self, Employees_Managment):
         Employees_Managment.setObjectName("Employees_Managment")
         Employees_Managment.resize(1200, 600)
@@ -230,7 +231,7 @@ class Ui_Employees_Managment(object):
         self.deleteButton.setText(_translate("Employees_Managment", "Delete"))
 
 
-
+# main
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
