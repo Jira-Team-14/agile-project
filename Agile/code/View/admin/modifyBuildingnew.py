@@ -15,6 +15,8 @@ from main import main_control
 from login import gui as G
 import Buildings_Managmentnew as BM
 
+
+# close function
 def close():
     modifyBuilding.close()
     pass
@@ -22,6 +24,7 @@ def close():
 class Ui_modifyBuilding(object):
 
 
+    # logout function
     def logOut(self):
         self.LoginWindow = QtWidgets.QMainWindow()
         self.ui = G.Ui_LoginWindow()
