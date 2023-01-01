@@ -16,11 +16,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 import Employees_Managmentnew as EM
 from login import gui as G
 
+# close function
 def close():
     addNewEmployee.close()
     pass
 
 class Ui_addNewEmployee(object):
+    # logout function
     def logOut(self):
         self.LoginWindow = QtWidgets.QMainWindow()
         self.ui = G.Ui_LoginWindow()
@@ -28,6 +30,7 @@ class Ui_addNewEmployee(object):
         self.LoginWindow.show()
         close()
 
+    # back function
     def back(self):
         self.Employees_Managment = QtWidgets.QMainWindow()
         self.ui = EM.Ui_Employees_Managment()
@@ -57,6 +60,8 @@ class Ui_addNewEmployee(object):
             ermsg = ermsg2 + " " + ermsg1
             messagebox.showerror('Error', ermsg)
 
+  
+    # UI setUp function
     def setupUi(self, addNewEmployee):
         addNewEmployee.setObjectName("addNewEmployee")
         addNewEmployee.resize(1200, 600)
@@ -430,7 +435,7 @@ class Ui_addNewEmployee(object):
         self.adminDashboardLabel_2.setText(_translate("addNewEmployee", "Add Employee"))
 
 
-
+# main
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
