@@ -16,12 +16,13 @@ import deleteBuildingnew as DB
 import Admin_Dashboardnew as AD
 from login import gui as G
 
-
+# close function
 def close():
     Buildings_Managment.close()
     pass
 
 class Ui_Buildings_Managment(object):
+# transitions Functions
 
     def showaddNewBuildings(self):
         self.addNewBuildingsnew = QtWidgets.QMainWindow()
@@ -46,14 +47,14 @@ class Ui_Buildings_Managment(object):
         self.ui.setupUi(self.deleteBuilding)
         self.deleteBuilding.show()
         close()
-
+# back function
     def back(self):
         self.Admin_Dashboard = QtWidgets.QMainWindow()
         self.ui = AD.Ui_Admin_Dashboard()
         self.ui.setupUi(self.Admin_Dashboard)
         self.Admin_Dashboard.show()
         close()
-
+ # logout function
 
     def logOut(self):
         self.LoginWindow = QtWidgets.QMainWindow()
@@ -62,7 +63,7 @@ class Ui_Buildings_Managment(object):
         self.LoginWindow.show()
         close()
 
-
+# UI setUp function
     def setupUi(self, Buildings_Managment):
         Buildings_Managment.setObjectName("Buildings_Managment")
         Buildings_Managment.resize(1200, 600)
@@ -230,7 +231,7 @@ class Ui_Buildings_Managment(object):
         self.modifyButton.setText(_translate("Buildings_Managment", "Modify"))
 
 
-
+# main
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
