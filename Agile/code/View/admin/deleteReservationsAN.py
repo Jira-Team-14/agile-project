@@ -14,11 +14,13 @@ from main import main_control
 from tkinter import messagebox
 import Reservations_Managmentnew as R
 
+# close function
 def close():
     viewReservations.close()
     pass
 
 class Ui_viewReservations(object):
+     # logout function
     def logOut(self):
         self.LoginWindow = QtWidgets.QMainWindow()
         self.ui = G.Ui_LoginWindow()
@@ -26,6 +28,7 @@ class Ui_viewReservations(object):
         self.LoginWindow.show()
         close()
 
+    # back function
     def back(self):
         self.Reservations_Managment = QtWidgets.QMainWindow()
         self.ui = R.Ui_Reservations_Managment()
@@ -36,6 +39,7 @@ class Ui_viewReservations(object):
     def deleteData(self):
         return
 
+    # show data function
     def showData(self):
         _translate = QtCore.QCoreApplication.translate
 
@@ -63,7 +67,7 @@ class Ui_viewReservations(object):
         return
 
 
-
+    # UI setUp function
     def setupUi(self, viewReservations):
         viewReservations.setObjectName("viewReservations")
         viewReservations.resize(1200, 600)
@@ -400,7 +404,7 @@ class Ui_viewReservations(object):
         self.showPushButton.setText(_translate("modifyEmployee", "Show "))
 
 
-
+# main
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
