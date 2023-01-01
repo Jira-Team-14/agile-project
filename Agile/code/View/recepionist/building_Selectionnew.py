@@ -20,20 +20,21 @@ from main import main_control
 import Reservationnew as CR
 from login import gui as G
 
-
+# close function
 def close():
     BuildingSelection.close()
     pass
 
 
 class Ui_BuildingSelection(object):
+    # log out function
     def logOut(self):
         self.LoginWindow = QtWidgets.QMainWindow()
         self.ui = G.Ui_LoginWindow()
         self.ui.setupUi(self.LoginWindow)
         self.LoginWindow.show()
         close()
-
+    # back function
     def back(self):
         self.Resident_Info_Sucess = QtWidgets.QMainWindow()
         self.ui = RI.Ui_Resident_Info_Sucess()
@@ -42,7 +43,8 @@ class Ui_BuildingSelection(object):
         close()
 
     mc = main_control()
-
+    
+    # UI show confirmed resident info function
     def ShowConfrim(self):
         self.mc.setBID(self.showBuildingIdLabel.text())
         self.mc.setG(self.showGenderLabel.text())
@@ -51,6 +53,7 @@ class Ui_BuildingSelection(object):
         self.ui.setupUi(self.confrimResDashboard)
         self.confrimResDashboard.show()
 
+    # show building info function
     def showBuilding(self):
         _translate = QtCore.QCoreApplication.translate
         # self.clearLineEdits()
@@ -66,7 +69,7 @@ class Ui_BuildingSelection(object):
         self.showLocationLabel.setText(_translate("modifyEmployee", str(result[0][1])))
         self.showBedAvaliableLabel.setText(_translate("modifyEmployee", str(int(result1[0][0]))))
         return
-
+    # show alternative buildings info function
     def showAltBuilding(self):
         _translate = QtCore.QCoreApplication.translate
         self.mc.incrementBuildingID()
@@ -84,7 +87,7 @@ class Ui_BuildingSelection(object):
         self.showBedAvaliableLabel.setText(_translate("modifyEmployee", str(int(result1[0][0]))))
         return
 
-
+    # UI setUp function
     def setupUi(self, BuildingSelection):
         BuildingSelection.setObjectName("BuildingSelection")
         BuildingSelection.resize(1200, 600)
@@ -402,7 +405,7 @@ class Ui_BuildingSelection(object):
         self.adminDashboardLabel_2.setText(_translate("BuildingSelection", "Building Occupance"))
 
 
-
+# main
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
