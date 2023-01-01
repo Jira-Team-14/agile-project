@@ -15,26 +15,28 @@ import Reservations_Managmentnew as RM
 from PyQt5 import QtCore, QtGui, QtWidgets
 from login import gui as G
 
+# close function
 def close():
     Admin_Dashboard.close()
     pass
 
 class Ui_Admin_Dashboard(object):
 
+    # logout function
     def logOut(self):
         self.LoginWindow = QtWidgets.QMainWindow()
         self.ui = G.Ui_LoginWindow()
         self.ui.setupUi(self.LoginWindow)
         self.LoginWindow.show()
         close()
-
+    # back function
     def back(self):
         self.LoginWindow = QtWidgets.QMainWindow()
         self.ui = G.Ui_LoginWindow()
         self.ui.setupUi(self.LoginWindow)
         self.LoginWindow.show()
         close()
-
+# transitions Functions
     def showEmployessManagment(self):
         self.Employees_Managment = QtWidgets.QMainWindow()
         self.ui = EM.Ui_Employees_Managment()
@@ -56,7 +58,7 @@ class Ui_Admin_Dashboard(object):
         self.Reservations_Managment.show()
         close()
 
-
+# UI setUp function
     def setupUi(self, Admin_Dashboard):
         Admin_Dashboard.setObjectName("Admin_Dashboard")
         Admin_Dashboard.resize(1200, 600)
@@ -226,7 +228,7 @@ class Ui_Admin_Dashboard(object):
         self.deleteButton.setText(_translate("Admin_Dashboard", "Reservations"))
 
 
-
+# main
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
